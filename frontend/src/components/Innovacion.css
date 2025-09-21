@@ -1,0 +1,217 @@
+/*
+ * Sistema: "InnovaSalud"
+ * Copyright (c) 2025 Felipe Lino. Todos los derechos reservados.
+ * Uso, reproducción o distribución sin autorización expresa está prohibida.
+ * Jurisdicción: México
+ */
+
+/*
+ * Sistema: "InnovaSalud"
+ * Copyright (c) 2025 Felipe Lino. Todos los derechos reservados.
+ * Uso, reproducción o distribución sin autorización expresa está prohibida.
+ * Jurisdicción: México
+ */
+
+/* --- Contenedor de Tarjetas (Grid Responsivo) --- */
+.innovacion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- Estilo de Tarjetas Individuales --- */
+.innovacion-card {
+    background: var(--color-blanco);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.innovacion-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-image-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-content h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-texto);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+/* --- Estilo del Modal Interactivo --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--color-blanco);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2rem;
+    color: #aaa;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.modal-title {
+    font-family: var(--fuente-titulos);
+    margin-top: 0;
+}
+
+.modal-category {
+    display: inline-block;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.modal-impact {
+    margin-top: 1rem;
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 2rem;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* --- ESTILOS PARA LAS SECCIONES DE CATEGORÍA --- */
+
+.category-section {
+    width: 100%;
+    margin-bottom: 3rem; /* Aumenta el espacio entre categorías */
+    text-align: center;
+}
+
+.category-title {
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem; /* Título más grande y prominente */
+    color: var(--color-texto);
+    margin-bottom: 2rem;
+    display: inline-block;
+    border-bottom: 4px solid var(--color-secundario); /* Línea de acento más gruesa */
+    padding-bottom: 0.5rem;
+}
+
+/* Ajuste para el padding de la cuadrícula dentro de la sección */
+.category-section .innovacion-grid {
+    padding: 0 2rem; 
+}
+
+
+/* --- NUEVOS ESTILOS PARA LA ETIQUETA DE TEMA EN EL MODAL --- */
+
+.modal-header {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.modal-theme {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+/* Colores específicos para cada tema */
+.theme-salud {
+    background-color: #007bff; /* Azul para Salud */
+}
+
+.theme-tecnología {
+    background-color: #6f42c1; /* Púrpura para Tecnología */
+}
+
+.theme-medio-ambiente {
+    background-color: #28a745; /* Verde para Medio Ambiente */
+}
+
+/* Eliminamos la etiqueta verde que ya teníamos para no confundir */
+.modal-category {
+    display: none;
+}
+
+.modal-description {
+    text-align: left;
+}
+
