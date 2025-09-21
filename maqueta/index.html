@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovaSalud - Prototipo Final</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="margin-top: 5px;">
+                <path d="M50,90 C10,50 30,10 50,30 C70,10 90,50 50,90 Z" fill="none" stroke="white" stroke-width="8" stroke-linejoin="round"></path>
+                <path d="M25 55 H 40 L 48 45 L 56 65 L 64 50 H 75" fill="none" stroke="#1dc8cd" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <h1><a href="#" id="nav-home-logo">InnovaSalud</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" id="nav-inicio">Inicio</a></li>
+                <li><a href="#" id="nav-innovaciones">Innovaciones</a></li>
+                <li><a href="#" id="nav-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        </main>
+
+    <footer>
+        <p>&copy; 2024 InnovaSalud | Un vistazo al futuro del bienestar.</p>
+    </footer>
+
+    <div id="modal-container" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close">&times;</button>
+            <img id="modal-img" src="" alt="" class="modal-img" />
+            <div class="modal-header">
+                <span id="modal-theme" class="modal-theme"></span>
+                <h2 id="modal-title" class="modal-title"></h2>
+            </div>
+            <p id="modal-description" class="modal-description"></p>
+            <div id="modal-impact" class="modal-impact"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

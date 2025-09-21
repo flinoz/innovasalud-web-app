@@ -1,0 +1,19 @@
+# Archivo de configuración para ignorar archivos en el proyecto de backend Node.js
+
+# Archivo de credenciales
+# ¡LA LÍNEA MÁS IMPORTANTE! Evita que tus contraseñas se suban a GitHub.
+.env
+
+# Dependencias
+# La carpeta node_modules puede pesar cientos de megabytes y se reinstala con "npm install".
+/node_modules
+
+# Archivos de registro (logs)
+# Útiles para depuración local, pero no deben estar en el repositorio.
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
